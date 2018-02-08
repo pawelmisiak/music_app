@@ -1,0 +1,27 @@
+<h1>Create a new User</h1>
+
+
+<form class="action" action="<%=users_url%>" method="post">
+  <input type="hidden"
+  name="authenticity_token"
+  value = "<%form_authenticity_token%>">
+
+
+<label>Email
+<input type="text"
+name="user[email]"
+id="user_email"
+value="<% @user.email %>">
+</label>
+<!-- password -->
+<label>Password
+<input type="password"
+name="user[password]"
+id="user_password"
+value="<% @user.password %>">
+</label>
+
+<!-- button -->
+<input type="submit" value="Sign up">
+
+</form>

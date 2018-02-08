@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MUSIC APP</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <header>
+    <% if !logged_in? %>
+    <%= link_to 'Sign up', new_user_url %>
+    <%= link_to 'Sign in', new_session_url %>
+    <% else %>
+    <%= button_to 'Log out', session_url, method: :delete%>
+    <%end%>
+    <font face="impact" size="12" color="blue"><center>The music App!</center></font>
+  </header>
+  <body>
+
+    <%= yield %>
+  </body>
+</html>

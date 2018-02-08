@@ -1,0 +1,27 @@
+<h1>Session in progress!</h1>
+
+
+<form class="action" action="<%=session_url%>" method="post">
+  <input type="hidden"
+  name="authenticity_token"
+  value = "<%form_authenticity_token%>">
+
+
+<label>Email
+<input type="text"
+name="user[email]"
+id="user_email"
+value="">
+</label>
+<!-- password -->
+<label>Password
+<input type="password"
+name="user[password]"
+id="user_password"
+value="">
+</label>
+
+<!-- button -->
+<input type="submit" value="Sign in">
+
+</form>
