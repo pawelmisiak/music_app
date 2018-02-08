@@ -1,0 +1,7 @@
+<h1>All the bands you have created</h1>
+
+<%Band.all.each do |b| %>
+  <div class="band-index-item">
+      <br /><%= b.name %>
+  </div>
+<% end %>
